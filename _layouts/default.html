@@ -1,14 +1,15 @@
 {%- comment -%} Based on layout in minima theme {%- endcomment -%}
 <!DOCTYPE html>
 <html lang="en">
-
-    {%- include header.html -%}
-
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Add your CSS and other meta tags here -->
+    <script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js"></script>
+    {% feed_meta %} {% seo %}
+  </head>
   <body>
-    {% include navigation.html %}
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">{{ content }}</div>
-      </main>
+    <header>{% include header.html omit_collection=true %}</header>
+    <main>{{ content }}</main>
+    <footer>{% include footer.html %}</footer>
   </body>
-  {% include footer.html %}
 </html>

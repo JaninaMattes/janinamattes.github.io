@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
-</html>
+---
+layout: default
+title: My Portfolio
+author: Janina Mattes
+---
+
+{% if page.author %}
+<p>Author: {{ page.author }}</p>
+{% endif %}
