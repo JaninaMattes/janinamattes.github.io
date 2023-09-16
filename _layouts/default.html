@@ -1,0 +1,14 @@
+{%- comment -%} Based on layout in minima theme {%- endcomment -%}
+<!DOCTYPE html>
+<html lang="en">
+
+    {%- include header.html -%}
+
+  <body>
+    {% include navigation.html %}
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">{{ content }}</div>
+      </main>
+  </body>
+  {% include footer.html %}
+</html>

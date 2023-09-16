@@ -1,1 +1,53 @@
-theme: jekyll-theme-midnight
+### Site metadata
+
+# Don't make the title longer than this, otherwise it gets covered in mobile view.
+title: Janina's Portfolio
+description: Starter for a static website or blog - built with Jekyll, a minimal theme and GH Pages
+
+email: janina.alica.mattes@gmail.com
+twitter_username:
+github_username: JaninaMattes
+rss: RSS
+
+### Build settings
+
+domain: janinamattes.github.io
+url: https://janinamattes.github.io/
+baseurl: 
+
+permalink: pretty
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  tools:
+    output: true
+  languages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - docs/
+  - vendor/
+  - Gemfile # Gemfile.lock is implied because of how matching works.
+  - LICENSE
+  - Makefile
+  - README.md
+  - sample*.png
+  - .bundle
+  - .jekyll-caches
+
+liquid:
+  error_mode: strict
+
+strict_front_matter: true
