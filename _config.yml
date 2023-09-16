@@ -17,7 +17,7 @@ baseurl:
 
 permalink: pretty
 
-theme: minima
+theme: jekyll-theme-minimal
 
 plugins:
   - jekyll-feed
