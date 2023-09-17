@@ -1,16 +1,4 @@
-/* Light Theme */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-}
-
-/* Dark Theme */
-.dark-mode {
-    --bg-color: #333333;
-    --text-color: #ffffff;
-}
-
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

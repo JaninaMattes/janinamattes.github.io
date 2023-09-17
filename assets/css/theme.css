@@ -1,0 +1,17 @@
+/* Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --bg-color-light: #d7d7d7;
+    --color-highlight: #E14139;
+    --text-color: #191919;
+    --text-color-light: #4b4b4b;
+}
+
+/* Dark Theme */
+.dark-mode {
+    --bg-color: #191919;
+    --bg-color-light: #282828;
+    --color-highlight: #E14139;
+    --text-color: #ffffff;
+    --text-color-light: #b9b9b9;
+}

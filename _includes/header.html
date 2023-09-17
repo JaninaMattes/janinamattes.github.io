@@ -1,6 +1,23 @@
 <header>
-<h2>Header</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Site logo -->
+      <div class="col">
+        <a class="logo navbar-brand" href="/profile">MyPage</a>
+      </div>
 
-{% include navigation.html %}
-<button id="theme-toggle">Toggle Theme</button>
+      <!-- Navigation -->
+      <div class="col">
+        <div class="navbar navbar-expand-lg">
+          {% include navigation.html %}
+
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round" id="theme-toggle"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
