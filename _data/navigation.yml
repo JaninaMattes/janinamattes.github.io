@@ -1,0 +1,13 @@
+# Belongs at: /_data/navigation.yml
+
+- title: Profile
+  url: /profile
+
+- title: Showcases
+  url: /showcases
+
+- title: Projects
+  url: /projects
+
+- title: Contact
+  url: /contact
