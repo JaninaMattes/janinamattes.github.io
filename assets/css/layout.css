@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-top: 100px; /* To accommodate the fixed header */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+/* Left and right side navbars */
+.fixed-nav-left,
+.fixed-nav-right {
+  position: fixed;
+  height: 100%;
+  top: 100px;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1;
+}
+
+.fixed-nav-left {
+  left: 0;
+}
+
+.fixed-nav-right {
+  right: 0;
+}
+
+#parallax-content {
+  padding: 20px;
+  z-index: 0;
+}

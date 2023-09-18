@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-
+  <head>
+    {% include head.html %}
+  </head>
   <body>
-    {% include header.html %}
+    <div class="position-absolute w-100">{% include header.html %}</div>
 
-    <section>
-      {{ content }}
-    </section>
+    <div class="container content-container">
+      <div class="row">
+          <nav class="col-1 align-items-start fixed-nav-left">
+              {% include left-side-nav.html %}
+          </nav>
+  
+          <main class="col-12">
+              <section id="parallax-content">
+                  {{ content }}
+              </section>
+          </main>
+  
+          <nav class="col-1 align-items-end fixed-nav-right">
+              {% include right-side-nav.html %}
+          </nav>
+      </div>
+  </div>
+  </div>  
 
     {% include footer.html %}
-    
+
     <!-- Add custom scripts here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   </body>
 </html>

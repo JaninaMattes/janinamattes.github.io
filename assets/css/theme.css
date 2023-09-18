@@ -1,17 +1,17 @@
 /* Light Theme */
 :root {
-    --bg-color: #ffffff;
-    --bg-color-light: #d7d7d7;
-    --color-highlight: #E14139;
-    --text-color: #191919;
-    --text-color-light: #4b4b4b;
+    --bg-color: #F2F2F4;
+    --bg-color-light: #e0e0e1;
+    --color-highlight: #703436;
+    --text-color: #24313E;
+    --text-color-light: #324456;
 }
 
 /* Dark Theme */
 .dark-mode {
-    --bg-color: #191919;
-    --bg-color-light: #282828;
-    --color-highlight: #E14139;
-    --text-color: #ffffff;
-    --text-color-light: #b9b9b9;
+    --bg-color: #24313E;
+    --bg-color-light: #324456;
+    --color-highlight: #703436;
+    --text-color: #F2F2F4;
+    --text-color-light: #e0e0e1;
 }
