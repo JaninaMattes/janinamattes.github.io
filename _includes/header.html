@@ -1,23 +1,17 @@
-<header>
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Site logo -->
-      <div class="col-7 align-items-start">
-        <a class="logo navbar-brand" href="/profile">MyPage</a>
-      </div>
-
-      <div class="col-5 align-items-end">
-        <!-- Navigation -->
-        <div class="navbar navbar-expand-lg">
-          {% include navigation.html %}
-
-          <!-- Rounded switch with added margin -->
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round" id="theme-toggle"></span>
-          </label>
-        </div>
-      </div>
-    </div>
+<div class="row">
+  <!-- Site logo -->
+  <div class="col logo">
+    <a class="logo navbar-brand" href="/profile">MyPage</a>
   </div>
-</header>
+
+  <!-- Navigation and Switch aligned to the right -->
+  <div class="col d-flex justify-content-end align-items-center nav-switch">
+      {% include navigation.html %}
+    <!-- Rounded switch with added margin -->
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round" id="theme-toggle"></span>
+    </label>
+  </div>
+  
+</div>

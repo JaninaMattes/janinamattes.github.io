@@ -1,110 +1,115 @@
-
 .navbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
-.navbar a.active, .navbar a.selected {
-    position: relative;
-    color: var(--text-color);
+.navbar a.active,
+.navbar a.selected {
+  position: relative;
+  color: var(--text-color);
 }
 
-.navbar a.active::after, .navbar a.selected::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    border-bottom: 2px solid var(--color-highlight);
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    transform: scaleX(1);
-    transition: transform 0.3s ease;
+.navbar a.active::after,
+.navbar a.selected::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid var(--color-highlight);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
 }
 
 .navbar ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--bg-color);
-    border: 1px solid var(--bg-color);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+  z-index: 1;
 }
 
 .navbar li:hover ul {
-    display: block;
+  display: block;
 }
 
 .navbar ul ul li {
-    margin: 0;
-    white-space: nowrap;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .navbar ul ul a {
-    padding: 10px 15px;
-    color: var(--bg-color-light);
+  padding: 10px 15px;
+  color: var(--bg-color-light);
 }
 
 /* Style the current and selected page's link in submenus */
-.navbar ul ul a.active, .navbar ul ul a.selected {
-    background-color: var(--color-highlight);
-    color: var(--text-color);
+.navbar ul ul a.active,
+.navbar ul ul a.selected {
+  background-color: var(--color-highlight);
+  color: var(--text-color);
 }
 
 .navbar-toggler {
-    border: none;
-    color: var(--bg-color-light);
+  border: none;
+  color: var(--bg-color-light);
 }
 
 .navbar-toggler-icon {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .navbar-collapse {
-    background-color: var(--bg-color-light);
-    padding: 10px;
+  background-color: var(--bg-color-light);
+  padding: 10px;
 }
 
 .navbar-nav .nav-item {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Style the mobile menu links */
 .navbar-nav .nav-link {
-    color: var(--bg-color-light);
-    transition: color 0.3s ease;
+  color: var(--bg-color-light);
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--text-color-light);
+  color: var(--text-color-light);
 }
 
 .logo {
-    font-size: 24px;
-    font-family: 'Roboto';
-    margin: 10px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: color 0.3s ease;
+  font-size: 24px;
+  font-family: "Roboto";
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: var(--text-color-light);
+  color: var(--text-color-light);
+}
+
+.nav-switch{
+    right: 0;
 }

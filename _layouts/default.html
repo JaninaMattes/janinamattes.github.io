@@ -4,25 +4,24 @@
     {% include head.html %}
   </head>
   <body>
-    <div class="position-absolute w-100">{% include header.html %}</div>
+    <header>
+      {% include header.html %}
+    </header>
 
-    <div class="container content-container">
-      <div class="row">
-          <nav class="col-1 align-items-start fixed-nav-left">
+    <div class="row">
+          <nav class="col-2 fixed-nav-left">
               {% include left-side-nav.html %}
           </nav>
-  
-          <main class="col-12">
-              <section id="parallax-content">
+
+              <section class="col-10 main-container">
                   {{ content }}
               </section>
-          </main>
-  
-          <nav class="col-1 align-items-end fixed-nav-right">
+
+          <nav class="col-2 fixed-nav-right">
               {% include right-side-nav.html %}
           </nav>
       </div>
-  </div>
+
   </div>  
 
     {% include footer.html %}
