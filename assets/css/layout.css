@@ -9,7 +9,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 1475px;
-  height: calc(100px - 20px);
+  height: 100px;
   margin: 20px;
   background-color: transparent;
   z-index: 1;
@@ -32,10 +32,12 @@ header {
 .fixed-nav-left,
 .fixed-nav-right {
   position: fixed;
+  justify-content: left;
+  align-items: left;
   height: calc(100vh - 100px - 20px * 2);
-  width: 5%;
+  width: 100px;
   top: 100px;
-  margin: 20px; 
+  margin: 20px 0 20px 20px; 
   background-color: var(--bg-color);
   color: var(--text-color);
 }
