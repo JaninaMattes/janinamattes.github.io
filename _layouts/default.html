@@ -9,17 +9,17 @@
     </header>
 
     <div class="row">
-          <nav class="col-2 fixed-nav-left">
-              {% include left-side-nav.html %}
-          </nav>
+          <aside class="col-2 fixed-nav-left">
+              {% include left-sidebar.html %}
+          </aside>
 
               <section class="col-10 main-container">
                   {{ content }}
               </section>
 
-          <nav class="col-2 fixed-nav-right">
-              {% include right-side-nav.html %}
-          </nav>
+          <aside class="col-2 fixed-nav-right">
+              {% include right-sidebar.html %}
+          </aside>
       </div>
 
   </div>  
@@ -28,7 +28,8 @@
 
     <!-- Add custom scripts here -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.min.js"></script>
+    <script src="{{ '/assets/bootstrap/css/bootstrap.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/sidebar-toggle.js' | relative_url }}"></script>
   </body>
 </html>
