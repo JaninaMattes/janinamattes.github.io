@@ -59,7 +59,7 @@
 }
 
 .navbar ul ul a {
-  padding: 10px 15px;
+  padding: 5px 5px;
   color: var(--bg-color-light);
 }
 
@@ -85,7 +85,8 @@
 }
 
 .navbar-nav .nav-item {
-  margin-bottom: 10px;
+  font-family: 'Montserrat';
+  font-size: 16px;
 }
 
 /* Style the mobile menu links */
@@ -98,9 +99,10 @@
   color: var(--text-color-light);
 }
 
-.logo {
+.logo { 
   font-size: 24px;
-  font-family: "Roboto";
+  font-weight: bold;
+  font-family: "Railway";
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.3s ease;
@@ -108,8 +110,4 @@
 
 .logo:hover {
   color: var(--text-color-light);
-}
-
-.nav-switch{
-    right: 0;
 }

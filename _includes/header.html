@@ -1,17 +1,30 @@
-<div class="row">
-  <!-- Site logo -->
-  <div class="col logo">
-    <a class="logo navbar-brand" href="/profile">MyPage</a>
+{% for entry in site.data.navigation %} {% capture fullurl %}{{ site.baseurl
+}}{{ entry.url }}{% endcapture %} {% if fullurl == page.url %} {% assign
+current_page = fullurl %} {% break %} {% elsif page.url contains fullurl %} {%
+assign current_page = fullurl %} {% endif %} {% endfor %}
+
+<div class="container-fluid">
+  <div class="float-left">
+    <a class="navbar-brand logo" href="/profile">MyPage</a>
   </div>
 
-  <!-- Navigation and Switch aligned to the right -->
-  <div class="col d-flex justify-content-end align-items-center nav-switch">
-      {% include navigation.html %}
-    <!-- Rounded switch with added margin -->
+  <nav class="navbar navbar-expand-lg float-right">
+    <!-- nav bar-->
+    <ul class="nav navbar-nav">
+      {% for entry in site.data.navigation %} {% assign sublinks =
+      entry.sublinks %}
+      <li class="nav-item">
+        <a
+          class="nav-link{% if entry.url == current_page %} selected{% endif %}"
+          href="{{ site.baseurl }}{{ entry.url }}"
+          >{{ entry.title }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- toggler -->
     <label class="switch">
-      <input type="checkbox" />
       <span class="slider round" id="theme-toggle"></span>
     </label>
-  </div>
-  
+  </nav>
 </div>
