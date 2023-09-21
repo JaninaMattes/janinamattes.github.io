@@ -1,0 +1,35 @@
+.sidebar-nav {
+  list-style-type: none;
+  margin-top: auto;
+}
+
+.sidebar-item {
+  height: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+.sidebar-link .sidebar-line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-color-light);
+  margin-right: 10px;
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-link:hover .sidebar-line {
+  transform: scaleX(1.4);
+}
+
+.sidebar-item.selected .sidebar-link .sidebar-line {
+  background-color: var(--text-color);
+  transform: scaleX(1.2);
+}

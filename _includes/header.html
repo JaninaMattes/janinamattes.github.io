@@ -1,7 +1,13 @@
-{% for entry in site.data.navigation %} {% capture fullurl %}{{ site.baseurl
-}}{{ entry.url }}{% endcapture %} {% if fullurl == page.url %} {% assign
-current_page = fullurl %} {% break %} {% elsif page.url contains fullurl %} {%
-assign current_page = fullurl %} {% endif %} {% endfor %}
+
+<!-- set class for selected nav-item -->
+{% for entry in site.data.navigation %}
+  {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+  {% if fullurl == page.url %}
+    {% assign current_page = fullurl %}
+  {% elsif page.url contains fullurl %}
+    {% assign current_page = fullurl %}
+  {% endif %}
+{% endfor %}
 
 <div class="container-fluid">
   <div class="float-left">
