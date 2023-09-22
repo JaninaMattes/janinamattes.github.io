@@ -1,6 +1,5 @@
 .navbar {
-  background-color: transparent;
-  width: 100%;
+  width: 100vh;
 }
 
 .navbar ul {
@@ -45,7 +44,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: transparent;
+
   border: 1px solid var(--bg-color);
   z-index: 1;
 }
@@ -67,22 +66,13 @@
 /* Style the current and selected page's link in submenus */
 .navbar ul ul a.active,
 .navbar ul ul a.selected {
-  background-color: transparent;
+
   color: var(--text-color);
 }
 
-.navbar-toggler {
-  border: none;
-  color: var(--bg-color-light);
-}
-
-.navbar-toggler-icon {
-  background-color: var(--bg-color);
-}
-
 .navbar-collapse {
-  background-color: transparent;
   padding: 5px 0;
+  margin: 0;
 }
 
 .navbar-nav .nav-item {

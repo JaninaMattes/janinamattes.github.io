@@ -13,7 +13,7 @@ install-gems:
 install: install-js install-gems
 
 serve:
-	bundle exec jekyll serve --trace --livereload
+	bundle exec jekyll serve --trace
 
 build:
-	bundle exec jekyll build --trace --incremental
+	bundle exec jekyll build --trace

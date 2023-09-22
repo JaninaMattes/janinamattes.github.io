@@ -4,31 +4,35 @@
 current_page = fullurl %} {% elsif page.url contains fullurl %} {% assign
 current_page = fullurl %} {% endif %} {% endfor %}
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-xl">
   <div class="d-flex flex-grow-1">
-      <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-      <a class="navbar-brand d-none d-lg-inline-block" href="/profile">MyPortfolio</a>
-      <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-          <img src="//via.placeholder.com/40?text=LOGO" alt="logo">
-      </a>
+    <span class="w-100 d-lg-none d-block"
+      ><!-- hidden spacer to center brand on mobile --></span
+    >
+    <!-- logo -->
+    <a class="navbar-brand d-none d-lg-inline-block" href="/profile"
+      >MyPortfolio</a
+    >
   </div>
-  <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-      <ul class="navbar-nav ml-auto flex-nowrap">
-        {% for entry in site.data.navigation %} {% assign sublinks =
-          entry.sublinks %}
-          <li class="nav-item">
-              <a
-          class="nav-link{% if entry.url == current_page %} selected{% endif %}"
+  <!-- navnar itself -->
+  <div class="navbar-collapse flex-grow-1 text-right" style="background-color: transparent;">
+    <ul class="navbar-nav ml-auto flex-nowrap">
+      {% for entry in site.data.navigation %} {% assign sublinks =
+      entry.sublinks %}
+      <li class="nav-item">
+        <a
+          class="nav-link {% if entry.url == current_page %} selected {% endif %}"
           href="{{ site.baseurl }}{{ entry.url }}"
           >{{ entry.title }}</a
         >
-          </li>
-          {% endfor %}
-      </ul>
+      </li>
+      {% endfor %}
+    </ul>
 
-      <div class="switch">
-        <span class="slider round" id="theme-toggle"></span>
-    </div>
+    <!--- toggle switch-->
+    <label class="switch">
+      <span class="slider round" onclick="toggleTheme()" span>
+    </label>
+
   </div>
-
 </nav>

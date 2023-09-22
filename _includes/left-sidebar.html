@@ -1,13 +1,10 @@
-
-<div class="sidebar-container">
-  <ul class="sidebar-nav">
-    {% for entry in site.data.navigation %}
-      <li class="sidebar-item">
-        <a href="{{ site.baseurl }}{{ entry.url }}" class="sidebar-link">
-          <div class="sidebar-line"></div>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="sidebar-nav sidebar-container">
+  {% for entry in site.data.navigation %}
+    <li class="sidebar-item">
+      <a href="{{ site.baseurl }}{{ entry.url }}" class="sidebar-link">
+        <div class="sidebar-line"></div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
