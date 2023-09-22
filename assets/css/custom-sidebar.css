@@ -26,8 +26,8 @@
 }
 
 .sidebar-link .sidebar-line {
-  width: 25px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
   background-color: var(--text-color-light);
   margin-right: 10px;
   transform-origin: left center;
@@ -40,5 +40,5 @@
 
 .sidebar-item.selected .sidebar-link .sidebar-line {
   background-color: var(--text-color);
-  transform: scaleX(1.2);
+  transform: scaleX(1.6);
 }

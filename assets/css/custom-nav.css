@@ -1,5 +1,6 @@
 .navbar {
   background-color: transparent;
+  width: 100%;
 }
 
 .navbar ul {
@@ -44,7 +45,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--bg-color);
+  background-color: transparent;
   border: 1px solid var(--bg-color);
   z-index: 1;
 }
@@ -66,7 +67,7 @@
 /* Style the current and selected page's link in submenus */
 .navbar ul ul a.active,
 .navbar ul ul a.selected {
-  background-color: var(--color-highlight);
+  background-color: transparent;
   color: var(--text-color);
 }
 
@@ -80,12 +81,12 @@
 }
 
 .navbar-collapse {
-  background-color: var(--bg-color-light);
-  padding: 10px;
+  background-color: transparent;
+  padding: 5px 0;
 }
 
 .navbar-nav .nav-item {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 16px;
 }
 
@@ -99,7 +100,7 @@
   color: var(--text-color-light);
 }
 
-.logo { 
+.logo {
   font-size: 24px;
   font-weight: bold;
   font-family: "Railway";
@@ -110,4 +111,14 @@
 
 .logo:hover {
   color: var(--text-color-light);
+}
+
+@media (min-width: 768px) {
+  .navbar-brand.abs {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
 }
