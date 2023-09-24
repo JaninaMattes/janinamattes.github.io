@@ -4,19 +4,25 @@
 current_page = fullurl %} {% elsif page.url contains fullurl %} {% assign
 current_page = fullurl %} {% endif %} {% endfor %}
 
-<nav class="navbar navbar-expand-xl">
-  <div class="d-flex flex-grow-1">
-    <span class="w-100 d-lg-none d-block"
-      ><!-- hidden spacer to center brand on mobile --></span
-    >
-    <!-- logo -->
-    <a class="navbar-brand d-none d-lg-inline-block" href="/profile"
-      >MyPortfolio</a
-    >
-  </div>
-  <!-- navnar itself -->
-  <div class="navbar-collapse flex-grow-1 text-right" style="background-color: transparent;">
-    <ul class="navbar-nav ml-auto flex-nowrap">
+<nav class="navbar navbar-expand-lg">
+  <!-- Use align-items-center to vertically center content -->
+  <a class="navbar-brand" href="/profile"><h1>MyPortfolio</h1></a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navBarToggler"
+    aria-controls="navBarToggler"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navigation" id="navBarToggler">
+    <ul class="navbar-nav ml-auto">
+      <!-- Use ml-auto to push navigation to the right -->
       {% for entry in site.data.navigation %} {% assign sublinks =
       entry.sublinks %}
       <li class="nav-item">
@@ -29,10 +35,11 @@ current_page = fullurl %} {% endif %} {% endfor %}
       {% endfor %}
     </ul>
 
-    <!--- toggle switch-->
+    <!-- Toggle switch -->
     <label class="switch">
-      <span class="slider round" onclick="toggleTheme()" span>
+      <input type="checkbox"/>
+      <span class="slider round" onclick="toggleTheme()"></span>
     </label>
-
+    
   </div>
 </nav>

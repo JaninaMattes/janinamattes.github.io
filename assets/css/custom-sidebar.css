@@ -38,6 +38,10 @@
   transform: scaleX(1.4);
 }
 
+.sidebar-link:active .sidebar-line {
+  transform: scaleX(1.6);
+}
+
 .sidebar-item.selected .sidebar-link .sidebar-line {
   background-color: var(--text-color);
   transform: scaleX(1.6);
