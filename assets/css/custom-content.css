@@ -1,32 +1,36 @@
-.info {
-    margin: 20px;
+.profile-info {
+    justify-self: left;
 }
 
 .col {
     flex: 1;
-    padding: 20px;
 }
 
 .title {
-    font-size: 24px;
+    font-family: 'Raleway',sans-serif;
     font-weight: bold;
-    margin: 20px;
+    text-rendering: optimizeLegibility;
+    font-size: 1.51572rem;
+    margin-bottom: 1.666rem;
+    color: inherit;
+    line-height: 1.1;
 }
 
-.text {
+.text { 
     font-family: 'Montserrat';
     font-size: 16px;
-    margin-bottom: 15px;
+    margin: 0px 0px 8px;
+    width: 100%;
+    max-width: 500px;
+    word-break: break-word;
     color: var(--text-color-light);
-    margin: 20px;
 }
 
 .resume {
-    font-size: 16px;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
     color: var(--text-color);
-    border-bottom: 2px solid var(--text-color);
-    margin: 20px;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .resume:hover {

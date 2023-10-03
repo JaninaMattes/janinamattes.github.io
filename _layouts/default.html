@@ -4,27 +4,23 @@
     {% include head.html %}
   </head>
   <body>
-    <header>
-      {% include header.html %}
-    </header>
+    <header>{% include header.html %}</header>
 
-    <div class="row">
-          <aside class="col-2 fixed-nav-left">
-              {% include left-sidebar.html %}
-          </aside>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-1">
+          <div class="fixed-nav-left">{% include left-sidebar.html %}</div>
+        </aside>
 
-              <section class="col-10 main-container">
-                  {{ content }}
-              </section>
+        <main class="col-8">
+          <div class="main-container">{{ content }}</div>
+        </main>
 
-          <aside class="col-2 fixed-nav-right">
-              {% include right-sidebar.html %}
-          </aside>
+        <aside class="col-1">
+          <div class="fixed-nav-right">{% include right-sidebar.html %}</div>
+        </aside>
       </div>
-
-  </div>  
-
-    {% include footer.html %}
+    </div>
 
     <!-- Add custom scripts here -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
