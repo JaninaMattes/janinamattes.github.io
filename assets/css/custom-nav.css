@@ -1,12 +1,12 @@
 .navbar {
-  position: relative;
-  justify-content: space-evenly;
-  font-family: "Raleway";
-  list-style: none;
-  margin: 0;
-  padding: 8px 0;
   display: flex;
   align-items: center;
+  font-family: "Raleway";
+  list-style: none;
+  top: 0;
+  padding: 20px 40px;
+  z-index: 9999;
+  transition: top .1s ease-in;
 }
 
 .navbar ul {
@@ -81,7 +81,7 @@ li *:last-child {
   margin:0;
 }
 .navbar-collapse {
-  padding: 5px 0;
+  padding: 8px 0;
   margin: 0;
 }
 
@@ -99,22 +99,60 @@ li *:last-child {
   color: var(--text-color-light);
 }
 
-.navigation {
-  margin-left: auto;
+.navbar-toggler {
+  padding: 0;
+  line-height: 1;
+  outline: none !important;
+  border: transparent !important;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-toggler-icon .line:first-child {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  height: 2px;
+  width: 20px;
+  margin: 5px 0px 0px;
+  background-color: var(--text-color)
+}
+
+.navbar-toggler-icon .line:last-child {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  margin: 5px 0px 0px;
+  background-color: var(--text-color)
 }
 
 .navbar-brand {
-  margin: 0;
   padding: 8px 0;
   left: 0;
 }
 
+.navbar-brand h1 {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.navbar-brand h1:hover {
+  color: var(--text-color-light);
+}
+
 @media (min-width: 768px) {
-  .navbar-brand.abs {
-    position: absolute;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  .navbar-brand{
   }
 }
+

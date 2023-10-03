@@ -17,10 +17,13 @@ current_page = fullurl %} {% endif %} {% endfor %}
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">
+      <div class="line"></div>
+      <div class="line"></div>
+    </span>
   </button>
 
-  <div class="collapse navbar-collapse navigation" id="navBarToggler">
+  <div class="collapse navbar-collapse" id="navBarToggler">
     <ul class="navbar-nav ml-auto">
       <!-- Use ml-auto to push navigation to the right -->
       {% for entry in site.data.navigation %} {% assign sublinks =
