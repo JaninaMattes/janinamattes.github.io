@@ -20,6 +20,10 @@ header {
   z-index: 9999;
 }
 
+main {
+  padding: 0px 32px;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -27,7 +31,6 @@ header {
   align-items: center;
   height: 748px;
   width: 79.1666666667vw !important;
-  padding: 0px 32px;
   margin: 0px auto;
 }
 
@@ -59,4 +62,16 @@ header {
   font-size: 16px;
   transform: rotate(90deg);
   transform-origin: left bottom;
+}
+
+
+@media (max-width: 767px) {
+
+  main {
+    padding: 0px 32px;
+  }
+
+  .fixed-nav-left, .fixed-nav-right {
+    display: none;
+  }
 }

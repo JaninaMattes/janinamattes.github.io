@@ -153,5 +153,12 @@ li *:last-child {
 @media (min-width: 768px) {
   .navbar-brand{
   }
+
+
+    @media (max-width: 767px) {
+      .profile-info {
+        grid-template-columns: 1fr;
+    }
+    }
 }
 
