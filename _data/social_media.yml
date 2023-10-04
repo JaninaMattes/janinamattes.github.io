@@ -1,0 +1,17 @@
+# Belongs at: /_data/social_media.yml
+
+- title: Git
+  label: Github
+  url: https://github.com/JaninaMattes
+
+- title: Ln
+  label: Linkedin
+  url: https://www.linkedin.com/in/janina-mattes/
+
+- title: Tw
+  label: Twitter
+  url: https://twitter.com/
+
+- title: Mail
+  label: E-Mail
+  url: mailto:youremail@example.com

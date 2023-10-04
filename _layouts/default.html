@@ -6,19 +6,17 @@
   <body>
     <header>{% include header.html %}</header>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <aside class="col-1">
+        <div class="col-md-1">
           <div class="fixed-nav-left">{% include left-sidebar.html %}</div>
-        </aside>
-
-        <main class="col-8">
+        </div>
+        <div class="col-md-10">
           <div class="main-container">{{ content }}</div>
-        </main>
-
-        <aside class="col-1">
+        </div>
+        <div class="col-md-1">
           <div class="fixed-nav-right">{% include right-sidebar.html %}</div>
-        </aside>
+        </div>
       </div>
     </div>
 

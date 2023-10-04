@@ -14,14 +14,11 @@ body {
   color: var(--text-color);
 }
 
+
 header {
   position: fixed;
   width: 100%;
   z-index: 9999;
-}
-
-main {
-  padding: 0px 32px;
 }
 
 .main-container {
@@ -29,32 +26,31 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 748px;
-  width: 79.1666666667vw !important;
-  margin: 0px auto;
+  height: 100vh;
+  width: 100%;
+  padding: 0px 32px;
 }
 
 /* Left and right side navbars */
 .fixed-nav-left,
 .fixed-nav-right {
   position: fixed;
-  justify-content: center;
-  display: flex;
-  height: calc(100vh - 100px - 20px * 2);
-  width: 100px;
-  top: 100px;
-  margin: 20px 0 20px 20px;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 100vh;
   z-index: 9999;
 }
 
 .fixed-nav-left {
+  vertical-align: middle;
+  margin-left: 2.5rem;
   left: 0;
-  align-items: flex-start;
 }
 
 .fixed-nav-right {
+  vertical-align: middle;
+  margin-right: 2.5rem;
   right: 0;
-  align-items: flex-end;
 }
 
 .rotated-text {
@@ -67,11 +63,11 @@ main {
 
 @media (max-width: 767px) {
 
-  main {
-    padding: 0px 32px;
-  }
-
   .fixed-nav-left, .fixed-nav-right {
     display: none;
   }
+
+  .main-container {
+    margin-top: 30%;
+  }  
 }

@@ -154,11 +154,5 @@ li *:last-child {
   .navbar-brand{
   }
 
-
-    @media (max-width: 767px) {
-      .profile-info {
-        grid-template-columns: 1fr;
-    }
-    }
 }
 
