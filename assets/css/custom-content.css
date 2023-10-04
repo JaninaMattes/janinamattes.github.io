@@ -41,7 +41,7 @@
   border-bottom: none;
 }
 
-.image-container {
+.profile-image-container {
   justify-self: right;
   position: relative;
   max-width: 100%;
@@ -60,19 +60,27 @@
   position: absolute;
   width: 90%; 
   height: 90%; 
-  right: -10%;
+  right: -20%;
   bottom: -20%;
   background: var(--bg-color-light);
   z-index: -1;
 }
 
+.no-padding-column-img {
+  padding: 0px 0px 0px 20px;
+}
+
+.no-padding-column-txt {
+  padding: 0px 20px 0px 0px;
+}
+
 @media (max-width: 767px) {
 
-  .image-container {
+  .profile-image-container {
     position: relative;
     object-position: center;
     border-style: none;
-    margin: 2rem 0;
+    margin: 2rem 1rem 2rem 0;
   }
 
   .image img {
@@ -80,7 +88,12 @@
     height: auto;
   }
 
-  .image-container .image {
-    margin-top: 2rem;
+  .no-padding-column-img {
+    padding: 0;
   }
+  
+  .no-padding-column-txt {
+    padding: 0;
+  }  
+  
 }
