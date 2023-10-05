@@ -1,41 +1,27 @@
+/* CSS styles for profile page*/
 .first-page-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 100%;
+  padding: 0 2.5rem;
 }
 
 .profile-info-container {
-  justify-self: left;
-  display: table-cell;
-}
-
-.profile-info-container h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.51572rem;
-  font-weight: bold;
-  margin-bottom: 1.666rem;
-  line-height: 1.1;
-  color: var(--text-color);
-  display: block;
-}
-
-.profile-info-container p {
-  width: 100%;
+  margin: 0 auto;
   max-width: 500px;
-  font-family: "Montserrat";
-  font-size: 16px;
-  margin: 0px 0px 8px;
-  color: var(--text-color-light);
-  word-break: break-word;
+  top: 0;
+  left: 0;
 }
 
 .resume {
   font-family: "Raleway", sans-serif;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-color);
   text-decoration: underline;
+  line-height: 1.1;
 }
 
 .resume a {
@@ -43,7 +29,7 @@
 }
 
 .resume:hover {
-  color: inherit;
+  color: var(--text-color-light);
   border-bottom: none;
 }
 
@@ -51,25 +37,27 @@
   justify-self: right;
   display: inline-block;
   position: relative;
+  top: 0;
+  right: 0;
   max-width: 500px;
-  height: auto;
+  max-height: 500px;
 }
 
 .profile-image-wrapper img {
   position: relative;
-  max-width: 100%;
-  margin-bottom: 1.666rem;
   z-index: 99;
 }
 
-.profile-image-wrapper ::after {
+.profile-image-wrapper::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  background-color: var(--bg-color-light);
   position: absolute;
   top: 20%;
   right: -20%;
-  width: 85%;
-  height: 85%;
-  background-color: var(--bg-color-light);
-  content: "";
+  width: 100%;
+  height: 100%;
 }
 
 .no-padding-column-img {
@@ -77,20 +65,28 @@
 }
 
 .no-padding-column-txt {
+  display: flex;
+  align-items: center;
   padding: 0px 20px 0px 0px;
 }
 
 @media (max-width: 768px) {
-  
-  .profile-info-container {
-    top: 20%;
-  }
-
-  .profile-image-container {
-    padding-top: 3rem;
-  }
-
-  .col-md-6 {
+  .first-page-content {
     padding: 0;
+  }
+
+  .profile-info-container {
+    margin: 0 auto;
+  }
+
+  .no-padding-column-txt {
+    display: block;
+    position: relative;
+    align-items: start;
+  }
+
+  .no-padding-column-img {
+    margin: 0 auto;
+    padding: 3rem 0;
   }
 }
