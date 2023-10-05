@@ -1,10 +1,11 @@
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-family: "Raleway";
   list-style: none;
   top: 0;
-  padding: 20px 40px;
+  padding: 2.5rem;
   transition: top .1s ease-in;
 }
 
@@ -107,6 +108,7 @@ li *:last-child {
 }
 
 .navbar-toggler-icon {
+
   display: inline-block;
   position: relative;
 }
@@ -124,7 +126,6 @@ li *:last-child {
 .navbar-toggler-icon .line:last-child {
   position: absolute;
   bottom: 2px;
-  left: 0;
   right: 0;
   width: 30px;
   height: 2px;
@@ -138,21 +139,16 @@ li *:last-child {
 }
 
 .navbar-brand h1 {
-  display: block;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: "Roboto Slab",serif;
   margin: 0;
-  padding: 0;
-  color: inherit;
+  color: var(--text-color);
 }
 
 .navbar-brand h1:hover {
   color: var(--text-color-light);
 }
 
-@media (min-width: 768px) {
-  .navbar-brand{
-  }
-
+@media (min-width: 768px) { 
 }
 

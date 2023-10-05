@@ -6,19 +6,22 @@
   <body>
     <header>{% include header.html %}</header>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-1">
-          <div class="fixed-nav-left">{% include left-sidebar.html %}</div>
-        </div>
-        <div class="col-md-10">
-          <div class="main-container">{{ content }}</div>
-        </div>
-        <div class="col-md-1">
-          <div class="fixed-nav-right">{% include right-sidebar.html %}</div>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="fixed-nav-left">{% include left-sidebar.html %}</div>
+          </div>
+          <div class="col-md-10">
+            <div class="content-container">{{ content }}</div>
+          </div>
+          <div class="col-md-1">
+            <div class="fixed-nav-right">{% include right-sidebar.html %}</div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+
 
     <!-- Add custom scripts here -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
