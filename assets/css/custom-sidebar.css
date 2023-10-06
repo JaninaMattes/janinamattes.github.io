@@ -55,7 +55,6 @@
 
 
 /* right side nav bar*/
-
 .sidebar-social-item {
   margin-bottom: calc(1.666rem / 2);
 }
@@ -64,7 +63,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 .sidebar-social-link:hover,

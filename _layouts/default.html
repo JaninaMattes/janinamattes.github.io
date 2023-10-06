@@ -3,7 +3,9 @@
   <head>
     {% include head.html %}
   </head>
-  <body>
+  <body class="">
+    <div class="overlay" id="overlay"></div>
+
     <header>{% include header.html %}</header>
 
     <main>
@@ -23,9 +25,10 @@
     </main>
 
     <!-- Add custom scripts here -->
+    <script src="{{ '/assets/js/main-redirect.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/sidebar-toggle.js' | relative_url }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ '/assets/bootstrap/js/bootstrap.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/sidebar-toggle.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   </body>
 </html>

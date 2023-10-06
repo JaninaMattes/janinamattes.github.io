@@ -15,9 +15,13 @@
   left: 0;
 }
 
+.profile-info-container h2{
+  padding-bottom: 1.2rem;
+}
+
 .resume {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-color);
   text-decoration: underline;
@@ -76,7 +80,7 @@
   }
 
   .profile-info-container {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .no-padding-column-txt {

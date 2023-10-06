@@ -1,17 +1,23 @@
-/* Light Theme */
+/* Colour Theme */
 :root {
-    --bg-color: #F2F2F4;
-    --bg-color-light: #e0e0e1;
-    --color-highlight: #a5383a;
-    --text-color: #24313E;
-    --text-color-light: #324456;
+    --grid-unit: 1rem;
+    --border-radius-base: 0.5rem;
+    --icon-moon-color: #f1c40f;
+    --icon-sun-color: #f39c12;
 }
 
-/* Dark Theme */
+.light-mode {
+    --bg-color: #FFF;
+    --bg-color-light: #e8e6e6;
+    --color-highlight: #b13a3c;
+    --text-color: #181a1b;
+    --text-color-light: #989898;
+  }
+  
 .dark-mode {
-    --bg-color: #24313E;
-    --bg-color-light: #324456;
-    --color-highlight: #7d373a;
-    --text-color: #F2F2F4;
-    --text-color-light: #e0e0e1;
-}
+    --bg-color: #181a1b;
+    --bg-color-light: #2f363d;
+    --color-highlight: #b13a3c;
+    --text-color: #FFF;
+    --text-color-light: #989898;
+  }
