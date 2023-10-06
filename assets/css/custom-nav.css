@@ -146,43 +146,6 @@ li *:last-child {
   color: var(--text-color-light);
 }
 
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-.checkbox-label {
-  background-color: var(--bg-color-light);
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fa-moon {color: var(--icon-moon-color)}
-
-.fa-sun {color: var(--icon-sun-color)}
-
-.checkbox-label .ball {
-  background-color: var(--text-color);
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
-}
-
 @media (min-width: 768px) { 
 
 }

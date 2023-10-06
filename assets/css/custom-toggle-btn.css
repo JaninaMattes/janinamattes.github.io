@@ -8,7 +8,6 @@
   box-sizing: content-box; 
 }
 
-/* Style for the slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -17,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--bg-color-light);
-  transition: background-color 0.4s, box-shadow 0.4s;
+  transition: background-color 1s, box-shadow 1s;
   border-radius: 24px;
 }
 
@@ -29,7 +28,7 @@
   left: 4px;
   bottom: 4px;
   background-color: var(--bg-color);
-  transition: transform 0.4s;
+  transition: transform 2s;
   border-radius: 50%;
 }
 
@@ -56,4 +55,48 @@ label {
   cursor: pointer;
   font-size: 16px;
   user-select: none;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--bg-color-light);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label .ball {
+  background-color: var(--text-color);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.moon-icon,
+.sun-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  fill: var(--text-color);
+  transform: translate(-50%, -50%);
 }
