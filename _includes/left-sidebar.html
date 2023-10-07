@@ -1,9 +1,13 @@
 <ul class="sidebar-nav sidebar-container">
   {% for entry in site.data.navigation %}
-    <li class="sidebar-item {% if page.url == entry.url %}selected{% endif %}">
-      <a href="{{ site.baseurl }}{{ entry.url }}" class="sidebar-link">
-        <div class="sidebar-line"></div>
-      </a>
-    </li>
+  <li class="sidebar-item">
+    <a
+      class="sidebar-link"
+      href="{{ entry.url }}"
+      data-scroll
+    >
+      <div class="sidebar-line"></div>
+    </a>
+  </li>
   {% endfor %}
 </ul>

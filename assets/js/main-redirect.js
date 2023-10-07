@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.opacity = "0";
     
     setTimeout(function () {
-      window.location.href = "/profile";
+      window.location.href = "/#profile";
       overlay.remove();
     }, 1000);
   

@@ -1,12 +1,6 @@
-<!-- set class for selected nav-item -->
-{% for entry in site.data.navigation %} {% capture fullurl %}{{ site.baseurl
-}}{{ entry.url }}{% endcapture %} {% if fullurl == page.url %} {% assign
-current_page = fullurl %} {% elsif page.url contains fullurl %} {% assign
-current_page = fullurl %} {% endif %} {% endfor %}
-
 <nav class="navbar navbar-expand-lg">
   <!-- Use align-items-center to vertically center content -->
-  <a class="navbar-brand" href="/profile"><h1>MyPortfolio</h1></a>
+  <a class="navbar-brand" href="#profile"><h1>MyPortfolio</h1></a>
 
   <button
     class="navbar-toggler"
@@ -26,28 +20,36 @@ current_page = fullurl %} {% endif %} {% endfor %}
   <div class="collapse navbar-collapse" id="navBarToggler">
     <ul class="navbar-nav ml-auto">
       <!-- Use ml-auto to push navigation to the right -->
-      {% for entry in site.data.navigation %} {% assign sublinks =
-      entry.sublinks %}
+      {% for entry in site.data.navigation %}
       <li class="nav-item">
         <a
-          class="nav-link {% if entry.url == current_page %} selected {% endif %}"
-          href="{{ site.baseurl }}{{ entry.url }}"
-          >{{ entry.title }}</a
-        >
+          class="nav-link"
+          href="{{ entry.url }}"
+          data-scroll
+        >{{ entry.title }}</a>
       </li>
       {% endfor %}
     </ul>
 
     <!-- Toggle switch -->
     <div>
-      <input type="checkbox" class="checkbox" id="checkbox">
+      <input type="checkbox" class="checkbox" id="checkbox" />
       <label for="checkbox" class="checkbox-label">
         <span class="ball">
-          <img id="moon-icon" class="moon-icon" src="/assets/svg/moon.svg" alt="Moon Icon">
-          <img id="sun-icon" class="sun-icon" src="/assets/svg/sun.svg" alt="Moon Icon">
+          <img
+            id="moon-icon"
+            class="moon-icon"
+            src="/assets/svg/moon.svg"
+            alt="Moon Icon"
+          />
+          <img
+            id="sun-icon"
+            class="sun-icon"
+            src="/assets/svg/sun.svg"
+            alt="Moon Icon"
+          />
         </span>
       </label>
     </div>
-    
   </div>
 </nav>

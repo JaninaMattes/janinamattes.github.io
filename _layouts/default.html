@@ -15,7 +15,12 @@
             <div class="fixed-nav-left">{% include left-sidebar.html %}</div>
           </div>
           <div class="col-md-10">
-            <div class="content-container">{{ content }}</div>
+            <div class="content-container">            
+              <div id="#profile">{% include profile.html %}</div>
+              <div id="#showcases">{% include showcases.html %}</div>
+              <div id="#projects">{% include projects.html %}</div>
+              <div id="#contact">{% include contact.html %}</div>
+            </div>
           </div>
           <div class="col-md-1">
             <div class="fixed-nav-right">{% include right-sidebar.html %}</div>
@@ -26,6 +31,7 @@
 
     <!-- Add custom scripts here -->
     <script src="{{ '/assets/js/main-redirect.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/scroll-smooth.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/sidebar-toggle.js' | relative_url }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
