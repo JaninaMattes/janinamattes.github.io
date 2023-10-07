@@ -10,27 +10,27 @@
   transition: top .1s ease-in;
 }
 
-.navbar ul {
+.navbar-nav ul {
   font-weight: 300;
 }
 
-.navbar li {
+.navbar-nav li {
   margin-right: 12px;
 }
 
-.navbar a {
+.navbar-nav a {
   text-decoration: none;
   color: var(--text-color-light);
 }
 
-.navbar a.active,
-.navbar a.selected {
+.navbar-nav a.active,
+.navbar-nav a.selected {
   position: relative;
   color: var(--text-color);
 }
 
-.navbar a.active::after,
-.navbar a.selected::after {
+.navbar-nav a.active::after,
+.navbar-nav a.selected::after {
   content: "";
   display: block;
   width: 100%;
@@ -43,7 +43,7 @@
   transition: transform 0.3s ease;
 }
 
-.navbar ul ul {
+.navbar-nav ul ul {
   display: none;
   position: absolute;
   top: 100%;
@@ -52,7 +52,7 @@
   z-index: 1;
 }
 
-.navbar li:hover ul {
+.navbar-navli:hover ul {
   display: block;
   color: var(--text-color);
 }
@@ -61,15 +61,17 @@ li *:last-child {
   margin-bottom: 0;
 }
 
-.navbar ul ul li {
+.navbar-nav ul ul li {
   margin: 0;
   white-space: nowrap;
 }
 
-.navbar ul ul a {
+.navbar-nav ul ul a {
   padding: 5px 5px;
   color: var(--bg-color-light);
 }
+
+
 
 /* Style the current and selected page's link in submenus */
 .navbar ul ul a.active,
