@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const scrollLinks = document.querySelectorAll("a[data-scroll]");
-  const sidebarLinks = document.querySelectorAll(".sidebar-link");
+  const sidebarLinks = document.querySelectorAll(".sidebar-item");
+  const navbarLinks = document.querySelectorAll(".sidebar-item");
 
   scrollLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
@@ -10,20 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "smooth" });
+        
         scrollLinks.forEach(function (otherLink) {
           otherLink.classList.remove("selected");
         });
-
         this.classList.add("selected");
-
-        sidebarLinks.forEach(function (sidebarLink) {
-          const sidebarTargetId = sidebarLink.getAttribute("href").substring(1);
-          if (sidebarTargetId === targetId) {
-            sidebarLink.classList.add("selected");
-          } else {
-            sidebarLink.classList.remove("selected");
-          }
-        });
       }
     });
   });

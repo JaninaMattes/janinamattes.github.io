@@ -90,7 +90,7 @@ li *:last-child {
   font-size: 1rem;
 }
 
-/* Style the mobile menu links */
+/* Style the menu links */
 .navbar-nav .nav-link {
   transition: color 0.3s ease;
 }
