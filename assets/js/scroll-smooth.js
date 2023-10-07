@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarLinks = document.querySelectorAll(".navbar-nav a");
   let previousIndex = localStorage.getItem("previousIndex");
 
+  if (previousIndex !== null) {
+    // default select profile page
+    sidebarLinks[previousIndex].classList.add("selected");
+    navbarLinks[previousIndex].classList.add("selected");
+    previousIndex = 0;
+  }
+
   scrollLinks.forEach(function (link, index) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
@@ -22,8 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
         navbarLinks[index].classList.add("selected");
 
         previousIndex = index;
-        localStorage.setItem("previousIndex", previousIndex);
       }
     });
   });
+  // persist index
+  localStorage.setItem("previousIndex", previousIndex);
 });
