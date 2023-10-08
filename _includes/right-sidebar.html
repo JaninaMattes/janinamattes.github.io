@@ -1,15 +1,18 @@
-<ul class="sidebar-nav sidebar-container">
-  {% for entry in site.data.social_media %}
-  <li class="sidebar-social-item">
-    <a
-      rel="noopener noreferrer"
-      href="{{ site.baseurl }}{{ entry.url }}"
-      aria-label="{{ entry.label }}"
-      class="sidebar-social-link"
-      target="_blank"
-    >
-      {{ entry.title }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="sidebar-container">
+  <ul class="sidebar-nav">
+    {% for entry in site.data.social_media %}
+    <li class="sidebar-social-item">
+      <a
+        rel="noopener noreferrer"
+        href="{{ site.baseurl }}{{ entry.url }}"
+        aria-label="{{ entry.label }}"
+        class="sidebar-social-link"
+        target="_blank"
+      >
+        {{ entry.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+

@@ -1,37 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const scrollLinks = document.querySelectorAll("a[data-scroll]");
-  const sidebarLinks = document.querySelectorAll(".sidebar-nav a");
+  const sidebarLinks = document.querySelectorAll(".sidebar-item a");
   const navbarLinks = document.querySelectorAll(".navbar-nav a");
+  const sidebarScrollLinks = document.querySelectorAll("a[sidebar-data-scroll]");
+  const navbarScrollLinks = document.querySelectorAll("a[navbar-data-scroll]");
   let previousIndex = localStorage.getItem("previousIndex");
 
-  if (previousIndex !== null) {
-    // default select profile page
-    sidebarLinks[previousIndex].classList.add("selected");
-    navbarLinks[previousIndex].classList.add("selected");
-    previousIndex = 0;
+  // Helper function to handle link clicks
+  function handleLinkClick(event, index) {
+    event.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (previousIndex !== null) {
+      sidebarLinks[previousIndex].classList.remove("selected");
+      navbarLinks[previousIndex].classList.remove("selected");
+    }
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+      sidebarLinks[index].classList.add("selected");
+      navbarLinks[index].classList.add("selected");
+      previousIndex = index;
+      localStorage.setItem("previousIndex", previousIndex);
+    }
   }
 
-  scrollLinks.forEach(function (link, index) {
+  // Initialize previousIndex if it's null
+  if (previousIndex !== null) {
+    sidebarLinks[previousIndex].classList.add("selected");
+    navbarLinks[previousIndex].classList.add("selected");
+  } else {
+    previousIndex = 0;
+    sidebarLinks[previousIndex].classList.add("selected");
+    navbarLinks[previousIndex].classList.add("selected");
+  }
+
+  // Add click event listeners to navbar scroll links
+  navbarScrollLinks.forEach(function (link, index) {
     link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (previousIndex !== null) {
-        sidebarLinks[previousIndex].classList.remove("selected");
-        navbarLinks[previousIndex].classList.remove("selected");
-      }
-
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-
-        sidebarLinks[index].classList.add("selected");
-        navbarLinks[index].classList.add("selected");
-
-        previousIndex = index;
-      }
+      handleLinkClick.call(this, event, index);
     });
   });
-  // persist index
-  localStorage.setItem("previousIndex", previousIndex);
+
+  // Add click event listeners to sidebar scroll links
+  sidebarScrollLinks.forEach(function (link, index) {
+    link.addEventListener("click", function (event) {
+      handleLinkClick.call(this, event, index);
+    });
+  });
 });

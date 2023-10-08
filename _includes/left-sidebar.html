@@ -1,13 +1,15 @@
-<ul class="sidebar-nav sidebar-container">
-  {% for entry in site.data.navigation %}
-  <li class="sidebar-item">
-    <a
-      class="sidebar-link"
-      href="{{ entry.url }}"
-      data-scroll
-    >
-      <div class="sidebar-line"></div>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="sidebar-container">
+  <ul class="sidebar-nav">
+    {% for entry in site.data.navigation %}
+    <li class="sidebar-item">
+      <a
+        class="sidebar-link"
+        href="{{ entry.url }}"
+        sidebar-data-scroll
+      >
+        <div class="sidebar-line"></div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

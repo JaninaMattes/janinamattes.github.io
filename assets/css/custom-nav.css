@@ -71,11 +71,9 @@ li *:last-child {
   color: var(--bg-color-light);
 }
 
-
-
 /* Style the current and selected page's link in submenus */
-.navbar ul ul a.active,
-.navbar ul ul a.selected {
+.navbar-nav ul ul a.active,
+.navbar-nav ul ul a.selected {
   color: var(--text-color);
 }
 
@@ -91,6 +89,7 @@ li *:last-child {
 .navbar-nav .nav-item {
   font-size: 1rem;
 }
+
 
 /* Style the menu links */
 .navbar-nav .nav-link {
@@ -148,6 +147,26 @@ li *:last-child {
   color: var(--text-color-light);
 }
 
-@media (min-width: 768px) {
-  /* All media queries here */
+.overlay {
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  background: var(--bg-color);
+  color: var(--text-color);
+  z-index: 10000;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+  pointer-events: none;
 }
+
+
+@media (max-width: 767px) {
+  .navbar-toggler {
+    /* Adjust styles for the menu button as needed */
+  }
+}
+

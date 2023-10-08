@@ -36,7 +36,7 @@
   text-decoration: none;
 }
 
-.sidebar-nav .sidebar-link {
+.sidebar-item .sidebar-link {
   width: 24px;
   height: 2px;
   margin-right: 10px;
@@ -46,12 +46,12 @@
   color: var(--text-color-light);
 }
 
-.sidebar-nav .sidebar-link:not(.selected):hover {
+.sidebar-item .sidebar-link:not(.selected):hover {
   transform: scaleX(1.2);
 }
 
-.sidebar-nav a.active,
-.sidebar-nav a.selected {
+.sidebar-item a.active,
+.sidebar-item a.selected {
   transform: scaleX(1.4);
   background-color: var(--text-color);
 }
