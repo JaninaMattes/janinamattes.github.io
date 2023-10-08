@@ -7,7 +7,7 @@
   top: 0;
   margin: 0;
   padding: 2.5rem;
-  transition: top .1s ease-in;
+  transition: top 0.1s ease-in;
 }
 
 .navbar-nav ul {
@@ -90,7 +90,6 @@ li *:last-child {
   font-size: 1rem;
 }
 
-
 /* Style the menu links */
 .navbar-nav .nav-link {
   transition: color 0.3s ease;
@@ -159,14 +158,39 @@ li *:last-child {
   color: var(--text-color);
   z-index: 10000;
   opacity: 0;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: none;
 }
 
-
 @media (max-width: 767px) {
-  .navbar-toggler {
-    /* Adjust styles for the menu button as needed */
-  }
-}
 
+  /* show navbar */
+  .navbar-collapse {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+
+  .navbar-collapse.show {
+    height: 100vh;
+    z-index: 9999;
+  }
+
+  /* animate simple burger menu */
+  .navbar-toggler .line {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-toggler.active .navbar-toggler-icon .line:first-child {
+    width: 30px;
+    transform: rotate(45deg) translateY(4px);
+  }
+  
+  .navbar-toggler.active .navbar-toggler-icon .line:last-child {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-4px);
+  }
+
+}

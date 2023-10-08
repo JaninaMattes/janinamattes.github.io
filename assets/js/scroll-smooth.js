@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarLinks = document.querySelectorAll(".navbar-nav a");
   const sidebarScrollLinks = document.querySelectorAll("a[sidebar-data-scroll]");
   const navbarScrollLinks = document.querySelectorAll("a[navbar-data-scroll]");
-  let previousIndex = localStorage.getItem("previousIndex");
+  let previousIndex = null;
 
   // Helper function to handle link clicks
   function handleLinkClick(event, index) {
@@ -21,15 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
       sidebarLinks[index].classList.add("selected");
       navbarLinks[index].classList.add("selected");
       previousIndex = index;
-      localStorage.setItem("previousIndex", previousIndex);
     }
   }
 
   // Initialize previousIndex if it's null
-  if (previousIndex !== null) {
-    sidebarLinks[previousIndex].classList.add("selected");
-    navbarLinks[previousIndex].classList.add("selected");
-  } else {
+  if (previousIndex === null) {
     previousIndex = 0;
     sidebarLinks[previousIndex].classList.add("selected");
     navbarLinks[previousIndex].classList.add("selected");
