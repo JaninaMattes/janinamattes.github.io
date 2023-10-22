@@ -1,9 +1,106 @@
-/* CSS styles for showcases page*/
+/* CSS styles for the showcases page */
 .second-page-content {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-page-content.container-fluid {
+  padding: 0;
+}
+
+.carousel-inner {
+  padding-top: 2em;
+  margin: 0;
+}
+
+.carousel-item {
+  padding-right: 1em;
+}
+
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+
+.card-title {
+  margin-bottom: 8px;
+  font-family: "Raleway",sans-serif;
+  font-weight: bold;
+}
+
+.card .img-wrapper {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-img {
+  height: 233px;
+  width: 355px;
+  border-radius: 10px;
+}
+
+.btn-outline {
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.btn-outline:hover {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  width: 5vh;
+  height: 5vh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@media (max-width: 767px) {
+
+  .second-page-content {
+    padding: 0;
+  }
+
+  .carousel-img {
+    height: 188px;
+    width: 255px;
+    border-radius: 10px;
+  }
+
+  .carousel-inner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 2.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 50%;
+    display: block;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 25.6%;
+    display: block;
+  }
 }
