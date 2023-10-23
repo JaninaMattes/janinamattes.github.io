@@ -1,22 +1,30 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
   <div class="carousel-inner">
     {% for item in site.data.carousel_data %}
     <!-- Add active if item selected "active"-->
     <div class="carousel-item active">
-      
-        <a class="img-link" href="{{ item.detail_url }}">
-          <div class="img-wrapper">
+      <a class="img-link" href="{{ item.detail_url }}">
+        <div class="img-wrapper">
           <img
+            class="project-img"
             src="{{ item.image }}"
             alt="{{ item.title }}"
           />
+          <div class="middle">
+            <div class="grid-container">
+              {% for tech in item.technologies %}
+              <div class="grid-item">
+                <p class="grid-item-text">{{ tech }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
-          <ul class="technologies-list">
-            {% for tech in entry.technologies %}
-            <li>{{ tech }}</li>
-            {% endfor %}
-          </ul>
-        </a>
+      </a>
 
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>
@@ -27,11 +35,21 @@
     {% endfor %}
   </div>
   <!-- Carousel Navigation -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden"></span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden"></span>
   </button>

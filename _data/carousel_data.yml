@@ -4,7 +4,7 @@
   image: "./imgs/dummy-img.jpg"
   detail_url: "#project1"
   description: "Description for Project 1"
-  technologies: ["C++", "Python", "Flask"]
+  technologies: ["C++", "Python", "Flask", "Docker", "FastAPI", "ROS", "AWS"]
 
 - title: "Project 2"
   image: "./imgs/dummy-img.jpg"
