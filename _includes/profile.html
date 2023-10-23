@@ -27,8 +27,12 @@
           <div class="profile-image-container">
             <div class="profile-image-wrapper">
               <picture>
-                <img class="profile-img" src="imgs/dummy-img.jpg" alt="profile picture">
-              </picture>
+                <source media="(max-width: 250px)" srcset="imgs/profile/profile_250x250.png 250w, imgs/profile/profile_300x300.png 300w">
+                <source media="(max-width: 380px)" srcset="imgs/profile/profile_300x300.png 300w, imgs/profile/profile_380x380.png 380w">
+                <source media="(max-width: 480px)" srcset="imgs/profile/profile_350x350.png 350w, imgs/profile/profile_480x480.png 480w">
+                <source media="(max-width: 500px)" srcset="imgs/profile/profile_480x480.png 480w, imgs/profile/profile_500x500.png 5000w">
+                <img class="profile-img" src="imgs/profile/profile_500x500.png" alt="Profile Picture">
+              </picture>              
             </div>
             <div class="img-offset"></div>
           </div>

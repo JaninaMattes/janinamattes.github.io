@@ -1,37 +1,37 @@
 # Belongs at: /_data/carousel_data.yml
 
 - title: "Project 1"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 1"
   technologies: ["C++", "Python", "Flask", "Docker", "FastAPI", "ROS", "AWS"]
 
 - title: "Project 2"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 2"
   technologies: ["C++", "Python", "Flask"]
 
 - title: "Project 3"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 3"
   technologies: ["C++", "Python", "Flask"]
 
 - title: "Project 4"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 4"
   technologies: ["C++", "Python", "Flask"]
 
 - title: "Project 5"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 5"
   technologies: ["C++", "Python", "Flask"]
 
 - title: "Project 6"
-  image: "./imgs/dummy-img.jpg"
+  image: "./imgs/projects/project_355x233.png"
   detail_url: "#project1"
   description: "Description for Project 6"
   technologies: ["C++", "Python", "Flask"]
