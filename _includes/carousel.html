@@ -3,20 +3,20 @@
     {% for item in site.data.carousel_data %}
     <!-- Add active if item selected "active"-->
     <div class="carousel-item active">
-      <div class="img-wrapper">
+      
         <a class="img-link" href="{{ item.detail_url }}">
+          <div class="img-wrapper">
           <img
-          class="carousel-img"
             src="{{ item.image }}"
             alt="{{ item.title }}"
           />
+        </div>
           <ul class="technologies-list">
             {% for tech in entry.technologies %}
             <li>{{ tech }}</li>
             {% endfor %}
           </ul>
         </a>
-      </div>
 
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>

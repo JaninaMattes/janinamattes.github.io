@@ -34,17 +34,25 @@
   font-weight: bold;
 }
 
-.card .img-wrapper {
+.img-wrapper {
   max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
-.carousel-img {
+.img-wrapper img {
   height: 233px;
   width: 355px;
-  border-radius: 10px;
+  transition: all .2s ease;
+  vertical-align: middle;
+}
+
+.img-wrapper img:hover {
+  transform: scale(1.2);
 }
 
 .btn-outline {

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const moonIcon = document.getElementById("moon-icon");
   const sunIcon = document.getElementById("sun-icon");
   const body = document.body;
-
+  
   // Function to toggle the theme
   function toggleTheme() {
     if (body.classList.contains("dark-mode")) {
