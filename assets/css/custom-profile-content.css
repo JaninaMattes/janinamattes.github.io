@@ -1,11 +1,13 @@
 /* CSS styles for profile page*/
 .first-page-content {
+  width: 100%;
+  min-width: 450px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 2.5rem;
 }
 
 .profile-info-container {
