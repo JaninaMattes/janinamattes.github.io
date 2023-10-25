@@ -4,6 +4,7 @@
     --border-radius-base: 0.5rem;
     --icon-moon-color: #f1c40f;
     --icon-sun-color: #f39c12;
+    --github-repo-color: #86b5ff;
 }
 
 .light-mode {
@@ -12,6 +13,7 @@
     --color-highlight: #b13a3c;
     --text-color: #181a1b;
     --text-color-light: #989898;
+    --border-color: #495560;
   }
   
 .dark-mode {
@@ -20,4 +22,5 @@
     --color-highlight: #b13a3c;
     --text-color: #FFF;
     --text-color-light: #989898;
+    --border-color: #e8e6e6;
   }

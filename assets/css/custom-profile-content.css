@@ -1,6 +1,8 @@
 /* CSS styles for profile page*/
 .first-page-content {
+  position: relative;
   width: 100%;
+  height: calc(100% - 19em);
   min-width: 450px;
   min-height: 100vh;
   margin: 0;

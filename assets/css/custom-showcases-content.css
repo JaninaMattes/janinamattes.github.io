@@ -1,6 +1,8 @@
 /* CSS styles for the showcases page */
 .second-page-content {
+  position: relative;
   width: 100%;
+  height: calc(100% - 19em);
   min-width: 450px;
   min-height: 100vh;
   margin: 0;
@@ -92,7 +94,7 @@
   display: inline-block;
   background-color: transparent;
   color: var(--text-color);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   white-space: nowrap;
   cursor: pointer;
@@ -112,7 +114,7 @@
 
 .btn-outline {
   color: var(--text-color);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-color);
 }
 
 .btn-outline:hover {

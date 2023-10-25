@@ -1,9 +1,127 @@
-/* CSS styles for projects page*/
+/* CSS styles for projects page */
 .third-page-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 2.5rem;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 19em);
+  min-width: 450px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-page-content .container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.github-projects-container {
+  padding-top: 30px;
+  background-color: transparent;
+}
+
+.github-module-item-outer {
+  width: 480px;
+  margin: 10px;
+}
+
+.github-module-item {
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  max-height: 190px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.github-module-link {
+  width: 100%;
+  height: 18px;
+  margin-left: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  line-height: normal;
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--github-repo-color) !important;
+  background-color: transparent;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+.github-module-link.active,
+.github-module-link:hover {
+  outline-width: 0;
+}
+
+.github-module-description {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--text-color);
+  font-weight: 300;
+  height: 100%;
+  max-height: 70px;
+  overflow: auto;
+}
+
+.horizontal-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.horizontal-item-list li {
+  margin-right: 10px; /* Adjust the margin to control spacing between list items */
+  align-items: center;
+  color: var(--text-color);
+}
+
+.bi-star-fill {
+  height: 10px;
+  width: 10px;
+  font-size: 10px;
+  margin-right: 5px;
+  fill: var(--text-color);
+}
+
+.repo-fill {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  margin-right: 5px;
+  fill: var(--text-color);
+}
+
+.repo-forked-fill {
+  height: 10px;
+  width: 10px;
+  font-size: 10px;
+  margin-right: 5px;
+  fill: var(--text-color);
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  font-family: Raleway, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 767px) {
+  .third-page-content {
+    padding: 0;
+  }
+
+  .github-module-item-outer {
+    max-width: 450px;
+    margin: 10px 0;
+  }
 }

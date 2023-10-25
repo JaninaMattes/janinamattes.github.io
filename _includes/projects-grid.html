@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    {% for item in site.data.github_project %}
+    <div class="github-module-item-outer">
+      <!-- card view -->
+      <div class="github-module-item">
+        <div class="card-body">
+          <h5 class="card-title d-flex align-items-center">
+            <img
+              class="repo-fill"
+              src="/assets/svg/repo.svg"
+              alt="Star Icon"
+            />
+            <a
+              class="github-module-link"
+              rel="noopener noreferrer"
+              aria-label="Github Project"
+              href="{{ item.url }}"
+              target="_blank"
+              >{{ item.title }}</a
+            >
+          </h5>
+          <p class="card-text github-module-description">
+            {{ item.description }}
+          </p>
+          <!-- card tech details with icons -->
+          <ul class="horizontal-item-list">
+            <li class="d-flex align-items-center">
+              <img
+                class="bi-star-fill"
+                src="/assets/svg/star-fill.svg"
+                alt="Star Icon"
+              /><span class="icon-text">{{ item.technology }}</span>
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                class="bi-star-fill"
+                src="/assets/svg/star-fill.svg"
+                alt="Star Icon"
+              /><span class="icon-text">{{ item.stars }}</span>
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                class="repo-forked-fill"
+                src="/assets/svg/repo-forked.svg"
+                alt="Repo Forked Icon"
+              /><span class="icon-text">{{ item.forks }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

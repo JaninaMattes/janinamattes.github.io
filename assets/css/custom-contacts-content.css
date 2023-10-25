@@ -1,9 +1,51 @@
 /* CSS styles for contact page*/
 .fourth-page-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 2.5rem;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 19em);
+  min-width: 450px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.fourth-page-content .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+
+.contact-info-container {
+  max-width: 500px;
+}
+
+.contact-info-email {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: underline;
+  line-height: 1.1;
+}
+
+.contact-info-email a {
+  background-color: transparent;
+}
+
+.contact-info-email:hover {
+  color: var(--text-color-light);
+  border-bottom: none;
+}
+
+@media (max-width: 767px) {
+    .fourth-page-content {
+      padding: 0;
+    }
+  
+    .github-module-item-outer {
+      max-width: 450px;
+      margin: 10px 0;
+    }
+  }

@@ -48,7 +48,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  border: 1px solid var(--bg-color);
+  border: 1px solid var(--border-color);
   z-index: 1;
 }
 
